@@ -25,7 +25,7 @@ public class ChangeOddIndexToUpperCase {
 		
 		for(i=0; i<=change.length-1; i++) {
 			
-			if(i%2 == 0) {
+			if(i%2 == 1) {
 				 char ch1 = Character.toUpperCase(change[i]);
 				 System.out.print(ch1);	 			
 			}
