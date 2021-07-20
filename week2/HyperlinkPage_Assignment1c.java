@@ -27,7 +27,7 @@ public class HyperlinkPage_Assignment1c {
 		System.out.println("The link for broken link verification is "+ attribute2);
 		element2.click();
 		Thread.sleep(5000);
-		String pageTitleExpected = "HTTP Status 404 – Not Found";
+		String pageTitleExpected = "HTTP Status 404 â€“ Not Found";
 		String titleActual = driver.getTitle();
 		if (pageTitleExpected .equals(titleActual)) {
 			System.out.println("Error Page is displayed");
