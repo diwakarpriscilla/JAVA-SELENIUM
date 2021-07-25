@@ -1,6 +1,6 @@
 package week3.day1;
 
-public class Students {
+public class Students__assign4 {
 	
 public void getStudentInfo(){
 		int id = 9820;
