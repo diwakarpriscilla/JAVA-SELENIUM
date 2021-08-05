@@ -83,29 +83,23 @@ public class Amazon {
 		// Click 'Add to Cart' button 
 		driver.findElement(By.xpath("//input[@id='add-to-cart-button']")).click();
 		System.out.println("Item added to cart");
-		Thread.sleep(1000);
+		Thread.sleep(1000);	
 		
-		//"*********Not Working******"
-		
-		// Get the cart sub-total and verify if it is correct.
-		/*
-		 * Actions builder2 = new Actions(driver); WebElement subTotalElement =
-		 * driver.findElement(By.
-		 * xpath("//span[@class='a-size-base-plus a-color-price a-text-bold']/span"));
-		 * builder2.moveToElement(subTotalElement).perform(); String subTotal
-		 * =subTotalElement.getText();
-		 */
-		
-		String subTotal = driver.findElement(By.xpath("//span[@class='a-size-base-plus a-color-price a-text-bold']/span")).getText();
-		
+		String subTotal = driver.findElement(By.xpath("//div[@class='a-column a-span11 a-text-left a-spacing-top-large']/span[2]/span")).getText();
 		
 		System.out.println("The Price as String with comma" +subTotal);
 		String subTotal_amount = subTotal.replaceAll("[\\D]", "");
 		System.out.println("The Price as String with digits alone" +subTotal_amount);
-		int subTotal_amount_com = Integer.parseInt(subTotal_amount);
-		System.out.println("The Price as Integer" +subTotal_amount_com);
 		
-		if(price_amount_com == subTotal_amount_com) {
+		//Converting string to Integer
+		int subTotal_amount_com = Integer.parseInt(subTotal_amount);
+		
+		//Removing last 2 zero's of integer
+		int subTotal_amount_com1 = subTotal_amount_com/100;
+		System.out.println("The Price as Integer" +subTotal_amount_com1);
+		
+		//Comparing prices
+		if(price_amount_com == subTotal_amount_com1) {
 			System.out.println("Prices are same");
 		}
 		else
