@@ -7,7 +7,6 @@ public class DuplicateLead extends BaseClass{
 
 	@Test
 	public void runDuplicateLead() throws InterruptedException {
-		driver.findElement(By.linkText("CRM/SFA")).click();
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.linkText("Find Leads")).click();
 		driver.findElement(By.xpath("//span[text()='Phone']")).click();
