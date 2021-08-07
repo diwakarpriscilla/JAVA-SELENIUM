@@ -10,7 +10,6 @@ public class MergeLead extends BaseClass {
 
 	@Test
 	public void runMergeLead() throws InterruptedException {
-		driver.findElement(By.linkText("CRM/SFA")).click();
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.linkText("Merge Leads")).click();
 		driver.findElement(By.xpath("//img[@alt='Lookup']")).click();
