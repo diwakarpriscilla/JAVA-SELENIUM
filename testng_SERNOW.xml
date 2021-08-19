@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<parameter name="url" value="https://dev113545.service-now.com/"></parameter>
+<parameter name="username" value="admin"></parameter>
+<parameter name="password" value="w6hnF2FRhwLC"></parameter>
+
+  <test thread-count="5" name="Test" verbose="5">
+    <classes>
+      <class name="ServiceNow.TC01_CreateNewIncident"/>
+      <class name="ServiceNow.TC02_UpdateExistingIncident"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
