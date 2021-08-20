@@ -13,7 +13,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass_SNOW {
 	public ChromeDriver driver;
-	public String incident_Number1;
+	String incident_Number1;
+					
 	
 	@Parameters ({"url", "username", "password"})
 	@BeforeMethod
@@ -36,8 +37,8 @@ public class BaseClass_SNOW {
 		WebElement filter = driver.findElement(By.id("filter"));
 		Thread.sleep(1000);
 		filter.sendKeys("Incident",Keys.ENTER);
-		driver.findElement(By.xpath("//div[text()='Incidents']")).click();
 		Thread.sleep(1000);
+
 	}
 		/*
 		 * @AfterMethod public void postCondition() { driver.close(); }
