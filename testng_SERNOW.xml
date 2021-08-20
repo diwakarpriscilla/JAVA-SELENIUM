@@ -8,8 +8,8 @@
 
   <test thread-count="5" name="Test" verbose="5">
     <classes>
-      <class name="ServiceNow.TC01_CreateNewIncident"/>
-      <class name="ServiceNow.TC02_UpdateExistingIncident"/>
-    </classes>
+ 	  <class name = "ServiceNow.TC01_CreateNewIncident"/>
+      <class name = "ServiceNow.TC02_UpdateExistingIncident"/>
+     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
